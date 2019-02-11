@@ -3,12 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     string title = "listening for osc messages on port " + ofToString(PORT);
-	ofSetWindowTitle(title);
+    ofSetWindowTitle(title);
 
-	ofSetFrameRate(60); // run at 60 fps
-	ofSetVerticalSync(true);
+    ofSetFrameRate(60); // run at 60 fps
+    ofSetVerticalSync(true);
 
-	receiver.setup(PORT);
+    receiver.setup(PORT);
     gui.setup();
     gui.add(highMagnitude);
     gui.add(midMagnitude);
@@ -40,18 +40,16 @@ void ofApp::update(){
 		else if(m.getAddress() == "/mid"){
 			mid = m.getArgAsFloat(0);
 		}
-		// check for an image being sent
-		// note: the size of the image depends greatly on your network buffer
-		// sizes, if an image is too big the message won't come through
+		// check for low
 		else if(m.getAddress() == "/low"){
 			low = m.getArgAsFloat(0);
 		}
 		else{
-            string msgString;
-            msgString = m.getAddress();
-            ofLog() << "address "+ msgString+ " not identified";
+                        string msgString;
+                        msgString = m.getAddress();
+                        ofLog() << "address "+ msgString+ " not identified";
 		}
-        collectMessage(m);
+                collectMessage(m);
 	}
 }
 
@@ -125,10 +123,10 @@ void ofApp::draw(){
     ofDrawBitmapString("low", padding*3, height);
     ofPopStyle();
 
-	// draw recent unrecognized messages
-	for(int i = 0; i < NUM_MSG_STRINGS; i++){
-		ofDrawBitmapStringHighlight(msgStrings[i], 10, gui.getHeight()+10 + 15 * i);
-	}
+    // draw recent unrecognized messages
+    for(int i = 0; i < NUM_MSG_STRINGS; i++){
+	ofDrawBitmapStringHighlight(msgStrings[i], 10, gui.getHeight()+10 + 15 * i);
+    }
 
     gui.draw();
 }

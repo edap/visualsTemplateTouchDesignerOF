@@ -11,7 +11,7 @@ I want to focus on the visuals part and not on the audio analysis part. OpenFram
 
 ## Tuning
 
-Each audio piece has its own structure, highlighting some frequencies works good on my example file, but could not work on yours. Therefore, it is reccomended to tune your frequencies in the TouchDesigner application. Follow these steps to set up your sound analysis:
+Each audio piece has its own structure, highlighting some frequencies works good on my example file, but could not work on yours. Therefore, it is recommended to tune your frequencies in the TouchDesigner application. Follow these steps to set up your sound analysis:
 
 - Select the AudioFileIn node on the left side, press 'p' and select the audio file you want to analyze. To play listen this audio file, select the 'audiodevout1' node on the top-left corner and toggle 'Active' from Off to On.
 

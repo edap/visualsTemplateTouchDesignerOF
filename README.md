@@ -7,7 +7,7 @@ The openFrameworks app reads the high, the mid and the low frequencies values an
 The TouchDesigner app play the audio file, makes the audio analysis and sends the OSC messages.
 
 ## Motivation
-I want to focus on the visuals part and not on the audio analysis part. OpenFrameworks gives me flexibility on the graphic side, touch designer gives me fast tuning of the audio band frequency.
+I want to focus on the visuals part and not on the audio analysis part. OpenFrameworks gives me flexibility on the graphic side, touch designer allows me to fast picking the band frequencies that I want to hightlight visually.
 
 ## Tuning
 
